@@ -1,0 +1,9 @@
+.box {
+    border: solid black;
+    display: inline-block;
+    width: 800px;
+    padding: 10px;
+}
+#thanks {
+    background-color: lightgreen;
+}

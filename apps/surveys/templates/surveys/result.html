@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        {% load static %}
+        <link rel='stylesheet' href='{% static "surveys/css/style.css" %}'>
+        <title>Dojo Survey Results</title>
+    </head>
+    <body>
+        <p class="box" id="thanks">Thanks for submitting this form! You have submitted this form {{request.session.submissions}} times now.</p>
+        <div class="box">
+            <h2>Submitted Information</h2>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>Name:</td>
+                        <td>{{ request.session.name }}</td>
+                    </tr>
+                    <tr>
+                        <td>Dojo Location:</td>
+                        <td>{{ request.session.location }}</td>
+                    </tr>
+                    <tr>
+                        <td>Favorite Language:</td>
+                        <td>{{ request.session.language }}</td>
+                    </tr>
+                    <tr>
+                        <td>Comment:</td>
+                        <td>{{ request.session.comment }}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <form action="." method="GET">
+                <input type="submit" value="Go Back">
+            </form>
+        </div>
+    </body>
+</html>
